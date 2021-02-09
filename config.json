@@ -1,7 +1,7 @@
 {
   "prefix": "-",
-  "discordUserID": "",
-  "discordToken": "",
-  "canvasDomain": "https://your-school.instructure.com/",
-  "canvasToken": ""
+  "discordUserID": process.env.DISCORD_USER_ID,
+  "discordToken": process.env.DISCORD_TOKEN,
+  "canvasDomain": process.env.CANVAS_DOMAIN,
+  "canvasToken": process.env.CANVAS_TOKEN
 }
