@@ -5,7 +5,7 @@ const Discord = require('discord.js');
 const logger = require('./util/logger.js');
 const scheduler = require('./util/scheduler.js');
 
-const prefix = "!";
+const prefix = "$";
 const discordToken = process.env.DISCORD_TOKEN;
 const discordUserID = process.env.DISCORD_USER_ID;
 
@@ -24,7 +24,7 @@ for (const file of commandFiles) {
 client.on('ready', () => {
   scheduler.init(client);
   winston.info('Restoring reminders and subscriptions..');
-  scheduler.restore();  
+  scheduler.restore();
   winston.info('Ready.');
 });
 
