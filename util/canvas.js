@@ -8,8 +8,8 @@ module.exports = {
   fetchAssignments: fetchAssignments,
 }
 
-const { canvasDomain, canvasToken } = require('../config.json');
-
+const canvasDomain = process.env.CANVAS_DOMAIN;
+const canvasToken = process.env.CANVAS_TOKEN;
 const session = axios.create({
   baseURL: canvasDomain,
   timeout: 10000,

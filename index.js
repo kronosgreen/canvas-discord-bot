@@ -5,7 +5,10 @@ const Discord = require('discord.js');
 const logger = require('./util/logger.js');
 const scheduler = require('./util/scheduler.js');
 
-const { prefix, discordToken, discordUserID } = require('./config.json');
+const prefix = "!";
+const discordToken = process.env.DISCORD_TOKEN;
+const discordUserID = process.env.DISCORD_USER_ID;
+
 const database = require('./util/database.js');
 
 const client = new Discord.Client();
