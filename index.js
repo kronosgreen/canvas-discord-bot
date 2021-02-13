@@ -29,7 +29,8 @@ client.on('ready', () => {
 });
 
 client.on('message', (msg) => {
-  if ((msg.author.id != discordUserID) || !msg.content.startsWith(prefix) || msg.author.bot) return;
+  // (msg.author.id != discordUserID) || not checking for specific user 
+  if (!msg.content.startsWith(prefix) || msg.author.bot) return;
 
   // Separate command call and arguments
   const args = msg.content.slice(prefix.length).split(/ +/);
